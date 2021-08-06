@@ -1,0 +1,14 @@
+// 1. IMPORTACIONES
+
+const express = require('express')
+const router = express.Router()
+const proyectoController = require('./../controllers/proyectoController')
+
+// 2. RUTEO
+
+router.get('/', proyectoController.obtenerProyectos)
+
+
+// 3. EXPORTACION
+
+module.exports = router
