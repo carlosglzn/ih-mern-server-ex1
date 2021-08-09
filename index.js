@@ -17,6 +17,9 @@ connectDB()
 // HABILITAR CORS (cross origin resource sharing)
 app.use(cors())
 
+// ACTIVAR BODY PARSER
+
+app.use(express.json({exteded: true}))
 
 // 3. RUTEO
 
@@ -29,6 +32,8 @@ app.use('/api/mascotas', require('./routes/mascotas'))
 app.get('/', (req, res) => {
     res.send('Hola mundo')
 })
+
+
 
 // 4. SERVIDOR
 
